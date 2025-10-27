@@ -1,0 +1,14 @@
+#EDA
+
+import pandas as pd
+import seaborn as sns
+
+# Your main dataset
+spotify_df = pd.read_csv("spotify_2023_peak_cleaned.csv")
+
+spotify_df.describe()
+
+sns.countplot(x='charted_billboard',data=spotify_df) # frequency of categories in the target variable
+
+spotify_df.hist(color='blue',figsize=(20,20)) # checking the distributions of all variables
+plt.show()
